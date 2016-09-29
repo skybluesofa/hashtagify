@@ -37,9 +37,6 @@ class Hashtagify
       return self::hashtagify($text);
     }
   }
-  public static function pascalCase ($text, $language = "") {
-    return Hashtagify::PascalCase($text, $language);
-  }
 
   // Returns a hashtag with the first letter of all words except for the first
   // being uppercased; all other letters being lowercased; spaces are removed
@@ -62,9 +59,6 @@ class Hashtagify
       return self::hashtagify($text, "_");
     }
   }
-  public static function lowercaseSnake ($text, $language = "") {
-    return Hashtagify::lowercase_snake($text, $language);
-  }
 
   // Returns a hashtag with the first letter of all words except for the first
   // being uppercased; all other letters being lowercased; underscores are used
@@ -77,9 +71,6 @@ class Hashtagify
       return self::hashtagify($text, "_");
     }
   }
-  public static function camelcaseSnake ($text, $language = "") {
-    return Hashtagify::camelcase_Snake($text, $language);
-  }
 
   // Returns a hashtag with the first letter of all words being uppercased; all
   // other letters being lowercased; underscores are used between words
@@ -90,9 +81,6 @@ class Hashtagify
       $text = lcfirst(ucwords(strtolower(URLify::downcode($text, $language))));
       return self::hashtagify($text, "_");
     }
-  }
-  public static function uppercaseSnake ($text, $language = "") {
-    return Hashtagify::Uppercase_Snake($text, $language);
   }
 
   // Returns a hashtag with all letters being lowercased and spaces removed
@@ -113,9 +101,6 @@ class Hashtagify
       $text = strtoupper(URLify::downcode($text, $language)));
       return self::hashtagify($text);
     }
-  }
-  public static function uppercase ($text, $language = "") {
-    return Hashtagify::UPPERCASE($text, $language);
   }
 
   // Remove all non-alphanumeric characters and add a octothorpe at the beginning
