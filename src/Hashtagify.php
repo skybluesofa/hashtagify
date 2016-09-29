@@ -23,7 +23,7 @@ class Hashtagify
       return array_map( function($string) { return Hashtagify::asIs($string); }, $text);
     } else {
       $text = URLify::downcode($text, $language);
-      return self::hashtagify($text);
+      return $this->hashtagify($text);
     }
   }
 
