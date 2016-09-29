@@ -20,5 +20,8 @@
     "require": {
       "php": ">=5.3.0",
       "jbroadway/urlify":"dev-master"
-    }
+    },
+    "require-dev": {
+   "codeclimate/php-test-reporter": "dev-master"
+  }
 }
