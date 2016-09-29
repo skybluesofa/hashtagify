@@ -7,4 +7,4 @@ before_script:
   - composer install --no-interaction --prefer-source
 
 script:
-  - phpunit --coverage-text --verbose
+  - phpunit --coverage-text --verbose --configuration tests/phpunit.xml
