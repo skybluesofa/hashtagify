@@ -23,7 +23,7 @@ class Hashtagify
       return array_map( function($string) { return Hashtagify::asIs($string); }, $text);
     } else {
       $text = URLify::downcode($text, $language);
-      return $this->hashtagify($text);
+      return self::hashtagify($text);
     }
   }
 
@@ -104,7 +104,7 @@ class Hashtagify
   }
 
   // Remove all non-alphanumeric characters and add a octothorpe at the beginning
-  private function hashtagify($text, $spaceReplacement="") {
+  private static function hashtagify($text, $spaceReplacement="") {
     $text = preg_replace("/[^A-Za-z0-9 ]/", "", $text);
     $text = str_replace(" ", $spaceReplacement, $text);
     return "#".$text;
