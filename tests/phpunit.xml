@@ -1,4 +1,4 @@
-<phpunit bootstrap="tests/bootstrap.php">
+<phpunit bootstrap="./bootstrap.php">
     <testsuite name="hastagify Test Suite">
         <directory>tests</directory>
     </testsuite>
