@@ -11,6 +11,11 @@
   	],
     "type": "library",
     "license": "MIT",
+     "autoload": {
+        "psr-4": {
+            "Skybluesofa\\Hashtagify\\": "src/"
+        }
+    },
     "minimum-stability": "stable",
     "require": {
       "php": ">=5.3.0",
