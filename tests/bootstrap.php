@@ -9,7 +9,7 @@ class AutoLoader {
      */
     public static function registerDirectory($dirName) {
  
-        $di = new DirectoryIterator($dirName);
+        $di = new \DirectoryIterator($dirName);
         foreach ($di as $file) {
  
             if ($file->isDir() && !$file->isLink() && !$file->isDot()) {
