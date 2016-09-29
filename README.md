@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/skybluesofa/hashtagify.svg?branch=master)](https://travis-ci.org/skybluesofa/hashtagify) [![Code Climate](https://codeclimate.com/github/skybluesofa/hashtagify/badges/gpa.svg)](https://codeclimate.com/github/skybluesofa/hashtagify) [![Test Coverage](https://codeclimate.com/github/skybluesofa/hashtagify/badges/coverage.svg)](https://codeclimate.com/github/skybluesofa/hashtagify/coverage) [![Total Downloads](https://img.shields.io/packagist/dt/skybluesofa/hashtagify.svg?style=flat)](https://packagist.org/packages/skybluesofa/hashtagify) [![Version](https://img.shields.io/packagist/v/skybluesofa/hashtagify.svg?style=flat)](https://packagist.org/packages/skybluesofa/hashtagify) [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE)
+
 # hashtagify
 Um...make hashtags from strings
 
