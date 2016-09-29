@@ -24,12 +24,12 @@ class HashtagifyTest extends PHPUnit_Framework_TestCase {
 	}
 	function test_camelcase_snake_hashtags () {
 		$this->assertEquals ('#another_Day_Another_Dollar', Hashtagify::camelcase_Snake ('Another day. Another dollar.'));
-		$this->assertEquals ('#another_Day_Another_dollar', Hashtagify::camelcase_Snake ('ANOTHER day. Another dollar.'));
+		$this->assertEquals ('#another_Day_Another_Dollar', Hashtagify::camelcase_Snake ('ANOTHER day. Another dollar.'));
 		$this->assertEquals ('#curiosity_Killed_The_Cat', Hashtagify::camelcase_Snake ('Curiosity Killed the Cat'));
 	}
 	function test_uppercase_snake_hashtags () {
 		$this->assertEquals ('#Another_Day_Another_Dollar', Hashtagify::Uppercase_Snake ('Another day. Another dollar.'));
-		$this->assertEquals ('#Another_Day_Another_dollar', Hashtagify::Uppercase_Snake ('ANOTHER day. Another dollar.'));
+		$this->assertEquals ('#Another_Day_Another_Dollar', Hashtagify::Uppercase_Snake ('ANOTHER day. Another dollar.'));
 		$this->assertEquals ('#Curiosity_Killed_The_Cat', Hashtagify::Uppercase_Snake ('Curiosity Killed the Cat'));
 	}
 	function test_lowercase_hashtags () {
