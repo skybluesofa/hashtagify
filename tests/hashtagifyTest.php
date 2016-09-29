@@ -1,4 +1,6 @@
 <?php
+use Skybluesofa\Hashtagify\Hashtagify;
+
 class HashtagifyTest extends PHPUnit_Framework_TestCase {
 	function test_as_is_hashtags () {
 		$this->assertEquals ('#AnotherdayAnotherdollar', Hashtagify::asIs ('Another day. Another dollar.'));
