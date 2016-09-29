@@ -78,7 +78,7 @@ class Hashtagify
     if (is_array($text)) {
       return array_map( function($string) { return Hashtagify::Uppercase_Snake($string); }, $text);
     } else {
-      $text = lcfirst(ucwords(strtolower(URLify::downcode($text, $language))));
+      $text = ucwords(strtolower(URLify::downcode($text, $language)));
       return self::hashtagify($text, "_");
     }
   }
