@@ -88,7 +88,7 @@ class Hashtagify
     if (is_array($text)) {
       return array_map( function($string) { return Hashtagify::lowercase($string); }, $text);
     } else {
-      $text = strtolower(URLify::downcode($text, $language)));
+      $text = strtolower(URLify::downcode($text, $language));
       return self::hashtagify($text);
     }
   }
@@ -98,7 +98,7 @@ class Hashtagify
     if (is_array($text)) {
       return array_map( function($string) { return Hashtagify::UPPERCASE($string); }, $text);
     } else {
-      $text = strtoupper(URLify::downcode($text, $language)));
+      $text = strtoupper(URLify::downcode($text, $language));
       return self::hashtagify($text);
     }
   }
