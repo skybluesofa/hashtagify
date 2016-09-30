@@ -16,10 +16,10 @@
             "Skybluesofa\\Hashtagify\\": "src/"
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
       "php": ">=5.3.0",
-      "jbroadway/urlify":"dev-master"
+      "jbroadway/urlify":"^1"
     },
     "require-dev": {
    "codeclimate/php-test-reporter": "dev-master"
