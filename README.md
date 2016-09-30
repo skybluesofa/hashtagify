@@ -4,7 +4,7 @@
 Um...make hashtags from strings
 
 ## Usage:
-You'll notice that these method names mirror the results that will be returned. However, there are standard 'camelcased' methods as well.
+You'll notice that these method names mirror the results that will be returned.
 
 To generate lowercase hashtag:
 
