@@ -14,3 +14,6 @@ before_script:
 
 script:
   - phpunit --coverage-text --verbose --configuration tests/phpunit.xml
+  
+after_script:
+  - vendor/bin/test-reporter
