@@ -4,16 +4,16 @@ php:
   - 5.6
   - 7.0
   - hhvm
-  
+
 addons:
     code_climate:
         repo_token: dd2e9ad903e9890f7a25267fa378231ab9ad6f2c4ecfc277ffd7a1a8c93c0f1e
 
 before_script:
-  - composer install --no-interaction --prefer-source
+  - composer install --dev --no-interaction --prefer-source
 
 script:
   - phpunit --coverage-text --verbose --configuration tests/phpunit.xml
-  
+
 after_script:
   - vendor/bin/test-reporter
