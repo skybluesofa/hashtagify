@@ -15,7 +15,8 @@
         "jbroadway/urlify": "^1"
     },
     "require-dev": {
-        "codeclimate/php-test-reporter": "dev-master"
+        "codeclimate/php-test-reporter": "dev-master",
+        "phpunit/phpunit": "^5.6"
     },
     "autoload": {
         "psr-4": {
