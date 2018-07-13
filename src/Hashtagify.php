@@ -34,7 +34,7 @@ class Hashtagify
       return array_map( function($string) { return Hashtagify::PascalCase($string); }, $text);
     } else {
       $text = ucwords(strtolower(URLify::downcode($text, $language)));
-      return self::hashtagify($text);
+      return self::hashtagify($text, null, 'And');
     }
   }
 
@@ -45,7 +45,7 @@ class Hashtagify
       return array_map( function($string) { return Hashtagify::camelCase($string); }, $text);
     } else {
       $text = lcfirst(ucwords(strtolower(URLify::downcode($text, $language))));
-      return self::hashtagify($text);
+      return self::hashtagify($text, null, 'And');
     }
   }
 
@@ -68,7 +68,7 @@ class Hashtagify
       return array_map( function($string) { return Hashtagify::camelcase_Snake($string); }, $text);
     } else {
       $text = lcfirst(ucwords(strtolower(URLify::downcode($text, $language))));
-      return self::hashtagify($text, "_");
+      return self::hashtagify($text, "_", "And");
     }
   }
 
@@ -79,7 +79,7 @@ class Hashtagify
       return array_map( function($string) { return Hashtagify::Uppercase_Snake($string); }, $text);
     } else {
       $text = ucwords(strtolower(URLify::downcode($text, $language)));
-      return self::hashtagify($text, "_");
+      return self::hashtagify($text, "_", "And");
     }
   }
 
@@ -99,12 +99,13 @@ class Hashtagify
       return array_map( function($string) { return Hashtagify::UPPERCASE($string); }, $text);
     } else {
       $text = strtoupper(URLify::downcode($text, $language));
-      return self::hashtagify($text);
+      return self::hashtagify($text, null, "AND");
     }
   }
 
   // Remove all non-alphanumeric characters and add a octothorpe at the beginning
-  private static function hashtagify($text, $spaceReplacement="") {
+  private static function hashtagify($text, $spaceReplacement="", $ampersandReplacement='and') {
+    $text = preg_replace('/(\s)*&(\s)*/', '${1}'.$ampersandReplacement.'${2}', $text);
     $text = preg_replace("/[^A-Za-z0-9 ]/", "", $text);
     $text = str_replace(" ", $spaceReplacement, $text);
     return "#".$text;
