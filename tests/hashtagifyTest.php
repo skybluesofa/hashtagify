@@ -50,5 +50,11 @@ class HashtagifyTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals ('#CURIOSITYKILLEDTHECAT', Hashtagify::UPPERCASE ('Curiosity Killed the Cat'));
 		$this->assertEquals ('#PEACHESANDCREAM', Hashtagify::UPPERCASE ('Peaches & Cream'));
 	}
+	function test_initials_hashtags () {
+		$this->assertEquals ('#EGPC', Hashtagify::initials('Est grandis planeta, cesaris.'));
+		$this->assertEquals ('#TBW', Hashtagify::initials('The believer witness'));
+		$this->assertEquals ('#TDF2019', Hashtagify::initials('Tour de France™ 2019'));
+		$this->assertEquals (['#2019TTIN', '#FBB'], Hashtagify::initials(['2019! The time is now', 'Foo Bar Baz']));
+	}
 }
 ?>

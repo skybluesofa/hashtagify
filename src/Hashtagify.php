@@ -103,6 +103,16 @@ class Hashtagify
     }
   }
 
+  // Returns a hashtag with initials being uppercased and spaces removed and keep digits
+  public static function initials($text) {
+      if (is_array($text)) {
+        return array_map( function($string) { return Hashtagify::initials($string); }, $text);
+      } else {
+        preg_match_all('/\b[^\d\W]|\d+/', $text, $matches);
+        return self::UPPERCASE(implode('', $matches[0]));
+      }
+  }
+
   // Remove all non-alphanumeric characters and add a octothorpe at the beginning
   private static function hashtagify($text, $spaceReplacement="", $ampersandReplacement='and') {
     $text = preg_replace('/(\s)*&(\s)*/', '${1}'.$ampersandReplacement.'${2}', $text);

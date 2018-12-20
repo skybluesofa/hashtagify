@@ -93,3 +93,14 @@ echo Hashtagify::camelcase_Snake('The time is now!');
 // "#the_Time_Is_Now"
 ?>
 ```
+
+To generate initials case hashtag with all words uppercased:
+
+```php
+<?php
+use Skybluesofa\Hashtagify;
+
+echo Hashtagify::initials('2019! The time is now');
+// "#2019TTIN"
+?>
+```
